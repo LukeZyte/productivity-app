@@ -1,0 +1,38 @@
+.headerBar {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(46, 27, 131);
+    height: 5em;
+    box-shadow: 0 0.1em 1em 0.5em #888888;
+}
+
+.headerTitle {
+    font-family: 'Tahoma';
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    margin-left: 0.5em;
+    padding-top: 0.2em;
+}
+
+.headerMenu {
+    display: flex;
+    position: fixed;
+    right: 1em;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+}
+
+#addTaskButton {
+    font-size: 1.3em;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#addTaskButton:hover {
+    color: white;
+    cursor: pointer;
+    transition: 0s;
+}

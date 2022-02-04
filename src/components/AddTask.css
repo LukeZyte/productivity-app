@@ -1,0 +1,110 @@
+.addTaskBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addTaskTitle {}
+
+.addTaskContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30em;
+}
+
+.addTaskContainerTitle {
+    display: flex;
+    flex-direction: row;
+}
+
+#inputTaskTitle {
+    height: 100%;
+    margin: auto;
+    margin-left: 1em;
+    border: none;
+    border-bottom: 0.2em solid #aaa;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+#inputTaskTitle:focus {
+    outline: none;
+    border-bottom: 0.2em solid red;
+    box-shadow: none;
+    transition: 0s;
+}
+
+#inputTaskTitle::placeholder {
+    color: #aaa;
+}
+
+.addTaskContainerDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 1.4em);
+}
+
+#textareaTaskDesc {
+    resize: none;
+    padding: 0.5em;
+    font-size: 1em;
+    font-family: 'Arial';
+    width: 100%;
+    min-height: 1em;
+    max-height: 6em;
+    border: none;
+    border-radius: 0.5em;
+    border: 0.2em solid #ccc;
+    transition: 0.3s;
+}
+
+#textareaTaskDesc:focus {
+    outline: none;
+    border: 0.2em solid red;
+    transition: 0s;
+}
+
+#textareaTaskDesc::placeholder {
+    color: #aaa;
+}
+
+#saveTaskButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    border-radius: 0.5em;
+    margin-top: 3em;
+    height: 2.5em;
+    width: 8em;
+    background-color: #ccc;
+    transition: 0.3s;
+}
+
+#saveTaskButton:hover {
+    background-color: red;
+    color: white;
+    transition: 0s;
+}
+
+#disabledSaveTaskButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #aaa;
+    border-radius: 0.5em;
+    margin-top: 3em;
+    height: 2.5em;
+    width: 8em;
+    background-color: #ccc;
+    transition: 0.3s;
+}

@@ -1,0 +1,26 @@
+.taskBody {
+    border-radius: 0.5em;
+    background-color: white;
+    width: calc(100% - 1em);
+    margin: 0.5em 0 0.5em 0;
+    transition: 0.5s;
+}
+
+.taskBody:hover {
+    box-shadow: 0 0.1em 1em 0.1em #888888;
+    transition: 0s;
+}
+
+.taskContainer {
+    padding: 1em;
+}
+
+.taskTitle {
+    font-size: 2em;
+    color: red;
+    font-weight: bold;
+}
+
+.taskContent {
+    margin-top: 0.5em;
+}
