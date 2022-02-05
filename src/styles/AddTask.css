@@ -5,8 +5,6 @@
     align-items: center;
 }
 
-.addTaskTitle {}
-
 .addTaskContainer {
     display: flex;
     flex-direction: column;
@@ -145,7 +143,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 2em;
+    margin-top: 0em;
     margin-bottom: 2em;
     width: 100%;
 }

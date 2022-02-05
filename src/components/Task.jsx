@@ -9,7 +9,7 @@ export default function Task(props) {
         <div className='taskBody'>
             <div className='taskContainer'>
                 <div className='taskLeftContainer'>
-                    <div className='taskTitle'>
+                    <div className='taskTitle' style={{color: props.task.mainColor}}>
                         {props.task.title} <FaRegPaperPlane/>
                     </div>
                     <div className='taskContent'>

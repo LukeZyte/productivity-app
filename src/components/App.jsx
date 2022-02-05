@@ -25,6 +25,7 @@ export default function App() {
 
   const [newTaskTitle, setNewTaskTitle] = useState("")
   const [newTaskDesc, setNewTaskDesc] = useState("")
+  const [newTaskMainColor, setNewTaskMainColor] = useState("Red")
 
   const date = new Date();
     // returns example: '4 lutego 2022, 22:11:48'
@@ -38,7 +39,7 @@ export default function App() {
       title: newTaskTitle,
       desc: newTaskDesc,
       postedDate: newTaskPostedDate,
-      // mainColor: newTaskMainColor
+      mainColor: newTaskMainColor
     }
     setTasks(oldTasks => [...oldTasks, newTask])
     setNewTaskTitle("")
@@ -60,6 +61,7 @@ export default function App() {
             handleAddTask={handleAddTask}
             setNewTaskTitle={setNewTaskTitle}
             setNewTaskDesc={setNewTaskDesc} 
+            setNewTaskMainColor={setNewTaskMainColor}
             />}
         />
       </Routes>

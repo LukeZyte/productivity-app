@@ -5,8 +5,14 @@ import '../styles/AddTask.css';
 export default function AddTask(props) {
 
     const handleColorSelection = (id) => {
-        console.log(id);
-        
+        document.querySelector('#addTaskRedContainer').className = 'addTaskSkipedColor'
+        document.querySelector('#addTaskOrangeContainer').className = 'addTaskSkipedColor'
+        document.querySelector('#addTaskYellowContainer').className = 'addTaskSkipedColor'
+        document.querySelector('#addTaskGreenContainer').className = 'addTaskSkipedColor'
+        document.querySelector('#addTaskBlueContainer').className = 'addTaskSkipedColor'
+        document.querySelector('#addTaskPurpleContainer').className = 'addTaskSkipedColor'
+        document.querySelector(`#addTask${id}Container`).className = 'addTaskSelectedColor'
+        props.setNewTaskMainColor(id)
     }
 
     // Fikolek zwiazany z blokowaniem zapisu przy pustym input Title
@@ -51,34 +57,35 @@ export default function AddTask(props) {
                         value={props.newTaskDesc}
                     />
                 </div>
+                <br/><h3>Wybierz barwę zadania</h3>
                 <div className="addTaskContainerColor">
-                    <div className="addTaskSelectedColor">
-                        <div id="addTaskRed" onClick={() => handleColorSelection("addTaskRed")}>
+                    <div id="addTaskRedContainer" className="addTaskSelectedColor">
+                        <div id="addTaskRed" onClick={() => handleColorSelection("Red")}>
 
                         </div>
                     </div>
-                    <div className="addTaskSkipedColor">
-                        <div id="addTaskOrange" className="addTaskColorPalette">
+                    <div id="addTaskOrangeContainer" className="addTaskSkipedColor">
+                        <div id="addTaskOrange" onClick={() => handleColorSelection("Orange")}>
 
                         </div>
                     </div>
-                    <div className="addTaskSkipedColor">
-                        <div id="addTaskYellow" className="addTaskColorPalette">
+                    <div id="addTaskYellowContainer" className="addTaskSkipedColor">
+                        <div id="addTaskYellow" onClick={() => handleColorSelection("Yellow")}>
 
                         </div>
                     </div>
-                    <div className="addTaskSkipedColor">
-                        <div id="addTaskGreen" className="addTaskColorPalette">
+                    <div id="addTaskGreenContainer" className="addTaskSkipedColor">
+                        <div id="addTaskGreen" onClick={() => handleColorSelection("Green")}>
 
                         </div>
                     </div>
-                    <div className="addTaskSkipedColor">
-                        <div id="addTaskBlue">
+                    <div id="addTaskBlueContainer" className="addTaskSkipedColor">
+                        <div id="addTaskBlue" onClick={() => handleColorSelection("Blue")}>
 
                         </div>
                     </div>
-                    <div className="addTaskSkipedColor">
-                        <div id="addTaskPurple">
+                    <div id="addTaskPurpleContainer" className="addTaskSkipedColor">
+                        <div id="addTaskPurple" onClick={() => handleColorSelection("Purple")}>
 
                         </div>
                     </div>
