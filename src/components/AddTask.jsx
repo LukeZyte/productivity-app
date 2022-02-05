@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import './AddTask.css';
+import '../styles/AddTask.css';
 
 export default function AddTask(props) {
 
+    const handleColorSelection = (id) => {
+        console.log(id);
+        
+    }
+
+    // Fikolek zwiazany z blokowaniem zapisu przy pustym input Title
     let [localTaskTitle, setLocalTaskTitle] = useState("")
 
     const handleTitleChange = () => {
         localTaskTitle = setLocalTaskTitle
+    }
+
+    const clearInputValues = () => {
+        props.setNewTaskTitle("")
+        props.setNewTaskDesc("")
     }
 
     return (
@@ -27,6 +38,7 @@ export default function AddTask(props) {
                             setLocalTaskTitle(e.target.value)
                             handleTitleChange()
                         }}
+                        value={props.newTaskTitle}
                     />
                 </div>
                 <div className="addTaskContainerDesc">
@@ -36,8 +48,50 @@ export default function AddTask(props) {
                         type="text"
                         placeholder="Miejsce na opis"
                         onChange={e => props.setNewTaskDesc(e.target.value)}
+                        value={props.newTaskDesc}
                     />
                 </div>
+                <div className="addTaskContainerColor">
+                    <div className="addTaskSelectedColor">
+                        <div id="addTaskRed" onClick={() => handleColorSelection("addTaskRed")}>
+
+                        </div>
+                    </div>
+                    <div className="addTaskSkipedColor">
+                        <div id="addTaskOrange" className="addTaskColorPalette">
+
+                        </div>
+                    </div>
+                    <div className="addTaskSkipedColor">
+                        <div id="addTaskYellow" className="addTaskColorPalette">
+
+                        </div>
+                    </div>
+                    <div className="addTaskSkipedColor">
+                        <div id="addTaskGreen" className="addTaskColorPalette">
+
+                        </div>
+                    </div>
+                    <div className="addTaskSkipedColor">
+                        <div id="addTaskBlue">
+
+                        </div>
+                    </div>
+                    <div className="addTaskSkipedColor">
+                        <div id="addTaskPurple">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div className="addTaskButtons">
+                    <Link 
+                        className="backButton" 
+                        to={"/"}
+                        onClick={clearInputValues}
+                    >
+                        Wstecz
+                    </Link>
                 {
                     localTaskTitle ?
                         <Link
@@ -52,6 +106,7 @@ export default function AddTask(props) {
                             <p>Zapisz</p>
                         </div>
                 }
+                </div>
             </div>
         </div >
     )

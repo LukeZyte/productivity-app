@@ -1,6 +1,6 @@
 import React from 'react';
 import Task from './Task.jsx'
-import './TaskList.css'
+import '../styles/TaskList.css'
 
 export default function TaskList(props) {
 

@@ -12,6 +12,9 @@
 }
 
 .taskContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 1em;
 }
 
@@ -23,4 +26,20 @@
 
 .taskContent {
     margin-top: 0.5em;
+}
+
+.taskLeftContainer {
+    display: flex;
+    flex-direction: column;
+}
+.taskRightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }

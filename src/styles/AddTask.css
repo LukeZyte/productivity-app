@@ -80,10 +80,11 @@
     font-weight: bold;
     color: black;
     border-radius: 0.5em;
-    margin-top: 3em;
+    border: 1px solid black;
     height: 2.5em;
     width: 8em;
-    background-color: #ccc;
+    background-color: #eee;
+    margin-left: 0.5em;
     transition: 0.3s;
 }
 
@@ -102,9 +103,102 @@
     font-weight: bold;
     color: #aaa;
     border-radius: 0.5em;
-    margin-top: 3em;
+    border: 1px solid #ccc;
     height: 2.5em;
     width: 8em;
     background-color: #ccc;
+    margin-left: 0.5em;
     transition: 0.3s;
+}
+
+.addTaskButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+}
+
+.backButton {
+    display: flex;
+    width: 8em;
+    height: 2.5em;
+    border-radius: 0.5em;
+    border: 1px solid black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-right: 0.5em;
+    background-color: #eee;
+    text-decoration: none;
+}
+
+.backButton:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    transition: 0s;
+}
+
+.addTaskContainerColor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.addTaskSelectedColor {
+    border-radius: 0.5em;
+    padding: 0.2em;
+    margin-top: -0.5em;
+    border: 0.3em solid;
+    background-color: white;
+
+}
+
+.AddTaskColorPalette {
+    border-radius: 0.5em;
+    background-color: aqua;
+    width: 5em;
+    height: 5em;
+}
+
+#addTaskRed {
+    background-color: red;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+}
+#addTaskOrange {
+    background-color: orange;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+}
+#addTaskYellow {
+    background-color: yellow;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+}
+#addTaskGreen {
+    background-color: green;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+}
+#addTaskBlue {
+    background-color: blue;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+}
+#addTaskPurple {
+    background-color: purple;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
 }
